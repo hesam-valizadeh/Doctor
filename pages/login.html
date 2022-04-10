@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ورود و عضویت</title>
+  <link rel="stylesheet" href="../css/bootstrap.rtl.min.css" />
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="my-5 text-center id="tab">
+      <ul class="tab_navigation">
+        <li class="active">عضویت</li>
+        <li>ورود</li>
+      </ul>
+      <div class="tab_container_area">
+        <div class="tab_container">
+          <h3 class="text-center py-4 mb-4">ثبت نام در سایت</h3>
+          <form action="" autocomplete="off" class="login-page">
+            <div class="row my-2">
+              <div class="col-md-6 input_group">
+                <input type="text" id="name" class="form_control" required />
+                <label for="name" class=""> نام : </label>
+              </div>
+
+              <div class="col-md-6 input_group">
+                <input type="text" id="lastName" class="form_control" required />
+                <label for="lastName">
+                  <span>نام خانوادگی : </span>
+                </label>
+              </div>
+            </div>
+
+            <div class="row my-2">
+              <div class="col-md-6 input_group">
+                <input type="text" id="phoneNumber" class="form_control" required />
+                <label for="phoneNumber">
+                  <span>شماره موبایل : </span>
+                </label>
+              </div>
+
+              <div class="col-md-6 input_group">
+                <input type="email" id="email" class="form_control" required />
+                <label for="email">
+                  <span>ایمیل : </span>
+                </label>
+              </div>
+            </div>
+
+            <div class="row my-2">
+              <div class="col-md-6 input_group">
+                <input type="text" id="userName" class="form_control" required />
+                <label for="userName">
+                  <span>نام کاربری : </span>
+                </label>
+              </div>
+
+              <div class="col-md-6">
+                <div class="text-start">جنسیت :</div>
+                <div class="row mt-3">
+                  <div class="col-md-3">
+                    <label for="man">
+                      <span>مرد :</span>
+                      <input type="radio" id="man" name="gender" value="man" checked />
+                    </label>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="woman">
+                      <span>خانم :</span>
+                      <input type="radio" id="woman" name="gender" value="woman" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row my-2">
+              <div class="col-md-6 input_group">
+                <div class="toggle_password">
+                  <i class="fas fa-fw fa-eye-slash field-icon"></i>
+                </div>
+
+                <input type="password" id="password" class="form_control" required />
+                <label for="password">
+                  <span>رمز عبور : </span>
+                </label>
+              </div>
+
+              <div class="col-md-6 input_group">
+                <div class="toggle_password_confirm">
+                  <i class="fas fa-fw fa-eye-slash field-icon"></i>
+                </div>
+                <input type="password" id="confirmPassword" class="form_control" required />
+                <span class="row" id="message"> </span>
+                <label for="confirmPassword">
+                  <span>تکرار رمز : </span>
+                </label>
+              </div>
+            </div>
+            <div class="row py-3">
+              <input type="submit" value="ثبت نام" class="btn btn-success" />
+            </div>
+          </form>
+        </div>
+        <div class="tab_container">
+          <h3 class="text-center py-4 mb-4">ورود به سایت</h3>
+          <form action="" autocomplete="off" class="login-page">
+            <div class="row my-2">
+              <div class="col-md-6 input_group">
+                <input type="text" id="userName" class="form_control" required />
+                <label for="userName">
+                  <span>نام کاربری : </span>
+                </label>
+              </div>
+            </div>
+            <div class="row my-2">
+              <div class="col-md-6 input_group">
+                <input type="text" id="phoneNumber" class="form_control" required />
+                <label for="phoneNumber">
+                  <span>شماره موبایل : </span>
+                </label>
+              </div>
+            </div>
+            <div class="row my-2">
+              <div class="col-md-6 input_group">
+                <input type="email" id="email" class="form_control" required />
+                <label for="email">
+                  <span>ایمیل : </span>
+                </label>
+              </div>
+            </div>
+            <div class="row my-2">
+              <div class="col-md-6 input_group">
+                <div class="toggle_password">
+                  <i class="fas fa-fw fa-eye-slash field-icon"></i>
+                </div>
+
+                <input type="password" id="password" class="form_control" required />
+                <label for="password">
+                  <span>رمز عبور : </span>
+                </label>
+              </div>
+            </div>
+            <div class="row py-3">
+              <input type="submit" value="ورود" class="btn btn-success" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="../js/jquery.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+
+</html>
