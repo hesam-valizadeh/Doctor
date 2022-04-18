@@ -11,8 +11,7 @@ $(window).ready(function () {
 //Back To Top Button Start
 
 $("#backToTopBtn").click(function () {
-  $("html").animate(
-    {
+  $("html").animate({
       scrollTop: 0,
     },
     0
@@ -29,7 +28,7 @@ $(window).scroll(function () {
   if ($(this).scrollTop() > 70) {
     $("#backToTopBtn").addClass("show");
     $("header").addClass("fixed w-100");
-    
+
   } else {
     $("#backToTopBtn").removeClass("show");
     $("header").removeClass("fixed w-100");
@@ -89,24 +88,24 @@ $(function () {
 
 // eye 
 
-$('.toggle_password ').click(function(){
+$('.toggle_password ').click(function () {
   // $(this).toggleClass('fas fa-eye');
   const input = $('#password ').attr('type');
   if (input == "password") {
-      $('#password ').attr('type','text');
+    $('#password ').attr('type', 'text');
   } else {
-      $('#password ').attr('type','password')
+    $('#password ').attr('type', 'password')
   }
 });
 
 
-$(' .toggle_password_confirm').click(function(){
+$(' .toggle_password_confirm').click(function () {
   // $(this).toggleClass('.fas.fa-eye .fas.fa-eye-slash');
   const inputConfirmPassword = $('#confirmPassword').attr('type');
   if (inputConfirmPassword == "password") {
-      $('#confirmPassword').attr('type','text');
+    $('#confirmPassword').attr('type', 'text');
   } else {
-      $('#confirmPassword').attr('type','password')
+    $('#confirmPassword').attr('type', 'password')
   }
 });
 
@@ -115,11 +114,11 @@ $(' .toggle_password_confirm').click(function(){
 
 
 // validation password with confirm password
-$('#password , #confirmPassword ').on('keyup',function(params) {
-  if ($('#password').val()==$('#confirmPassword').val()) {
-    $('#message').html('درست می باشد').css('color','green');
-  }else{
-    $('#message').html('درست نمی باشد').css('color','red');
+$('#password , #confirmPassword ').on('keyup', function (params) {
+  if ($('#password').val() == $('#confirmPassword').val()) {
+    $('#message').html('درست می باشد').css('color', 'green');
+  } else {
+    $('#message').html('درست نمی باشد').css('color', 'red');
   }
 })
 // validation password with confirm password
@@ -227,8 +226,8 @@ $(".chat_icon").click(function (params) {
 
 
 // Collapse
-$(document).ready(function() {
-  $(".accordion").on("click", function() {
+$(document).ready(function () {
+  $(".accordion").on("click", function () {
     $(this).toggleClass("active-accordion");
     $(this).next().slideToggle(600);
   });
@@ -240,12 +239,12 @@ $(document).ready(function() {
 $(document).ready(function () {
   var x = 0;
   $('.btn-next').click(function () {
-      x = (x <= 300) ? (x + 100) : 0;
-      $('figure').css('left', x + "%");
+    x = (x <= 300) ? (x + 100) : 0;
+    $('figure').css('left', x + "%");
   });
   $('.btn-prev').click(function () {
-      x = (x >= 100) ? (x - 100) : 400;
-      $('figure').css('left', x + "%");
+    x = (x >= 100) ? (x - 100) : 400;
+    $('figure').css('left', x + "%");
   });
 })
 // slider
@@ -253,28 +252,28 @@ $(document).ready(function () {
 // filterable
 $(document).ready(function () {
   $('.btn').click(function () {
-      var attr = $(this).attr('data-li');
-      $('.btn').removeClass('active')
-      $(this).addClass("active");
-      $('.item').hide()
-      if (attr == "1") {
-          $("." + attr).show();
-      } else if (attr == "2"){
-          $("." + attr).show();
-      }else if (attr == "3"){
-          $("." + attr).show();
-      }else if (attr == "4"){
-          $("." + attr).show();
-      }else if (attr == "5"){
-          $("." + attr).show();
-      }else if (attr == "6"){
-          $("." + attr).show();
-      }else if (attr == "7"){
-          $("." + attr).show();
-      }else{
+    var attr = $(this).attr('data-li');
+    $('.btn').removeClass('active')
+    $(this).addClass("active");
+    $('.item').hide()
+    if (attr == "1") {
+      $("." + attr).show();
+    } else if (attr == "2") {
+      $("." + attr).show();
+    } else if (attr == "3") {
+      $("." + attr).show();
+    } else if (attr == "4") {
+      $("." + attr).show();
+    } else if (attr == "5") {
+      $("." + attr).show();
+    } else if (attr == "6") {
+      $("." + attr).show();
+    } else if (attr == "7") {
+      $("." + attr).show();
+    } else {
       $('.item').show()
 
-      }
+    }
   })
 });
 // filterable
@@ -296,15 +295,14 @@ function drawResults(results) {
     .map(
       (result) =>
       `
-   
-        <div class="row my-5" >
+     <div class="row my-5" >
         <div class="col-md-6">
           <div class="card rounded" id="post-blog">
             <img src="${result.img}" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title mt-4">${result.title}</h5>
-              <p class="card-text text-secondary">${result.body} [...]</p>
-              <a href="#" class="btn btn-info text-light px-2" >${result.more}</a>
+                <h5 class="card-title mt-4">${result.title}</h5>
+                <p class="card-text text-secondary">${result.body} [...]</p>
+                <a href="#" class="btn btn-info text-light px-2" >بیشتر</a>
             </div>
           </div>
         </div>
@@ -312,14 +310,13 @@ function drawResults(results) {
           <div class="card rounded">
             <img src="${result.img}" class="card-img-top" alt="...">
             <div class="card-body">
-            <h5 class="card-title mt-4">${result.title}</h5>
-            <p class="card-text text-secondary">${result.body} [...]</p>
-              <a href="#" class="btn btn-info text-light px-2" >${result.more}</a>
+                <h5 class="card-title mt-4">${result.title}</h5>
+                <p class="card-text text-secondary">${result.body} [...]</p>
+                <a href="#" class="btn btn-info text-light px-2" >بیشتر</a>
             </div>
           </div>
         </div>
       </div>
-
         `
     )
     .join('');
@@ -332,7 +329,7 @@ window.addEventListener('scroll', () => {
   if (
     document.documentElement.scrollTop +
     document.documentElement.clientHeight >=
-    document.documentElement.scrollHeight
+    document.documentElement.scrollHeight - 3
   ) {
     loader.classList.remove('hidden');
     setTimeout(() => {
@@ -341,12 +338,3 @@ window.addEventListener('scroll', () => {
     }, 2000);
   }
 });
-
-
-
-
-
-
-
-
-
