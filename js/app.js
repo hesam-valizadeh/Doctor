@@ -278,3 +278,75 @@ $(document).ready(function () {
   })
 });
 // filterable
+
+
+
+let page = 1;
+const container = document.querySelector('#posts');
+const loader = document.querySelector('.loader');
+
+function getData() {
+  fetch(`../js/post-blog.json`)
+    .then((response) => response.json())
+    .then((results) => drawResults(results));
+}
+
+function drawResults(results) {
+  const html = results
+    .map(
+      (result) =>
+      `
+   
+        <div class="row my-5" >
+        <div class="col-md-6">
+          <div class="card rounded" id="post-blog">
+            <img src="${result.img}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title mt-4">${result.title}</h5>
+              <p class="card-text text-secondary">${result.body} [...]</p>
+              <a href="#" class="btn btn-info text-light px-2" >${result.more}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card rounded">
+            <img src="${result.img}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title mt-4">${result.title}</h5>
+            <p class="card-text text-secondary">${result.body} [...]</p>
+              <a href="#" class="btn btn-info text-light px-2" >${result.more}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        `
+    )
+    .join('');
+  page++;
+  container.innerHTML += html;
+}
+
+document.addEventListener('DOMContentLoaded', getData);
+window.addEventListener('scroll', () => {
+  if (
+    document.documentElement.scrollTop +
+    document.documentElement.clientHeight >=
+    document.documentElement.scrollHeight
+  ) {
+    loader.classList.remove('hidden');
+    setTimeout(() => {
+      loader.classList.add('hidden');
+      getData();
+    }, 2000);
+  }
+});
+
+
+
+
+
+
+
+
+
